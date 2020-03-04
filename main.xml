@@ -1,11 +1,118 @@
-<table name="predator_shield_reborn_fix">
+<table name="predator_shield_reborn">
 
     <Localization directory="Localization" default="english.txt">
 
     </Localization>
-    <AssetUpdates id="19979" name="asset_updates" folder_name="predator-shield-fix" version="1.00" provider="modworkshop"/>
+    <AssetUpdates id="19979" name="asset_updates" folder_name="predator-shield-3.0" provider="lastbullet"/>
 
-    <GlobalValue id="predator_shield_reborn_fix" color="Color(0, 1, 0)"/>
+    <GlobalValue id="predator_shield_reborn" color="Color(0, 1, 0)"/>
+
+    <!-- shield mod for akimbo -->
+
+    <WeaponMod id="mod_shield" based_on="wpn_fps_upg_o_reflex" type="shield" unit="units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy" texture_bundle_folder="mods" drop="false" is_a_unlockable="true">
+        <stats concealment="-20" suppression="-10" spread="1" recoil="1"/>
+    </WeaponMod>  
+        
+    <!-- shield mod for akimbo -->
+
+    <!-- PREDATORSHIELD-Primary -->  
+
+        <WeaponMod based_on="wpn_fps_lmg_m134_body_upper" id="wpn_fps_shield_body" unit="units/mods/weapons/wpn_fps_predatorshield_pts/wpn_fps_predatorshield_body" type="extra" drop="false" is_a_unlockable="false"/>
+
+         <WeaponMod based_on="wpn_fps_lmg_m134_body_upper" id="wpn_fps_shield_body_akimbo" unit="units/mods/weapons/wpn_fps_predatorshield_pts/wpn_fps_predatorshield_body_akimbo" type="extra" drop="false" is_a_unlockable="false"/>
+
+
+        <WeaponNew unlock_level="10">
+            <weapon id="predatorshield" based_on="m134" texture_bundle_folder="mods" weapon_hold="m134" global_value="predator_shield_reborn">  
+              <stats zoom="4"/>
+                <use_data selection_index="2"/>   <!--1 secondary 2 primary -->
+                <animations reload_name_id="s552" equip_id="equip_s552" recoil_steelsight="true"></animations>             
+                
+            </weapon>
+            <factory id="wpn_fps_predatorshield" unit="units/mods/weapons/wpn_fps_predatorshield/wpn_fps_predatorshield">        
+            
+                <optional_types>
+                </optional_types>
+
+                <default_blueprint>
+                <value_node value="wpn_fps_shield_body"/>               
+                </default_blueprint>
+
+                <uses_parts> 
+                <value_node value="wpn_fps_shield_body"/>
+                </uses_parts>         
+                
+            </factory>
+
+            <stance/>
+
+        </Weapon>
+
+    <!-- PREDATORSHIELD-Secondary! -->
+
+
+        <WeaponNew unlock_level="10">
+            <weapon id="predatorshield_secondary" based_on="m134" texture_bundle_folder="mods" weapon_hold="m134" global_value="predator_shield_reborn">  
+              <stats zoom="4"/>
+                <use_data selection_index="1"/>   <!--1 secondary 2 primary -->
+                <animations reload_name_id="s552" equip_id="equip_s552" recoil_steelsight="true"></animations>             
+                
+            </weapon>
+            <factory id="wpn_fps_predatorshield_secondary" unit="units/mods/weapons/wpn_fps_predatorshield_secondary/wpn_fps_predatorshield_secondary">
+                <optional_types>
+                </optional_types>
+
+                <default_blueprint>
+                <value_node value="wpn_fps_shield_body"/>               
+                </default_blueprint>
+
+                <uses_parts> 
+                <value_node value="wpn_fps_shield_body"/>
+                </uses_parts>         
+                
+            </factory>
+
+            <stance/>
+
+        </Weapon>
+
+    <!--Add Files -->
+        <AddFiles directory="assets">
+
+            <!-- PREDATORSHIELD Not Pts -->
+                <cooked_physics  path="units/mods/weapons/wpn_fps_predatorshield/wpn_fps_predatorshield"/>
+                <model           path="units/mods/weapons/wpn_fps_predatorshield/wpn_fps_predatorshield"/>
+                <object          path="units/mods/weapons/wpn_fps_predatorshield/wpn_fps_predatorshield"/>
+                <unit            path="units/mods/weapons/wpn_fps_predatorshield/wpn_fps_predatorshield"/>
+                <material_config path="units/mods/weapons/wpn_fps_predatorshield/wpn_fps_predatorshield"/>
+                <texture         path="guis/dlcs/mods/textures/pd2/blackmarket/icons/weapons/predatorshield"/>
+
+            <!-- PREDATORSHIELD Secondary Not Pts -->
+                <cooked_physics  path="units/mods/weapons/wpn_fps_predatorshield_secondary/wpn_fps_predatorshield_secondary"/>
+                <model           path="units/mods/weapons/wpn_fps_predatorshield_secondary/wpn_fps_predatorshield_secondary"/>
+                <object          path="units/mods/weapons/wpn_fps_predatorshield_secondary/wpn_fps_predatorshield_secondary"/>
+                <unit            path="units/mods/weapons/wpn_fps_predatorshield_secondary/wpn_fps_predatorshield_secondary"/>
+                <material_config path="units/mods/weapons/wpn_fps_predatorshield_secondary/wpn_fps_predatorshield_secondary"/>
+                <texture         path="guis/dlcs/mods/textures/pd2/blackmarket/icons/weapons/predatorshield_secondary"/>
+
+            <!--  PREDATORSHIELD PTS -->
+                <material_config path="units/mods/weapons/wpn_fps_predatorshield_pts/wpn_fps_predatorshield_body"/>
+                <cooked_physics  path="units/mods/weapons/wpn_fps_predatorshield_pts/wpn_fps_predatorshield_body"/>
+                <model           path="units/mods/weapons/wpn_fps_predatorshield_pts/wpn_fps_predatorshield_body"/>
+                <object          path="units/mods/weapons/wpn_fps_predatorshield_pts/wpn_fps_predatorshield_body"/>
+                <unit            path="units/mods/weapons/wpn_fps_predatorshield_pts/wpn_fps_predatorshield_body"/>
+                <texture         path="units/mods/weapons/wpn_fps_predatorshield_pts/wpn_fps_predatorshield_body_df"/>
+                <texture         path="units/mods/weapons/wpn_fps_predatorshield_pts/wpn_fps_predatorshield_body_nm"/>
+
+            <!-- PREDATORSHIELD PTS akimbo -->
+                <material_config path="units/mods/weapons/wpn_fps_predatorshield_pts/wpn_fps_predatorshield_body_akimbo"/>
+                <cooked_physics  path="units/mods/weapons/wpn_fps_predatorshield_pts/wpn_fps_predatorshield_body_akimbo"/>
+                <model           path="units/mods/weapons/wpn_fps_predatorshield_pts/wpn_fps_predatorshield_body_akimbo"/>
+                <object          path="units/mods/weapons/wpn_fps_predatorshield_pts/wpn_fps_predatorshield_body_akimbo"/>
+                <unit            path="units/mods/weapons/wpn_fps_predatorshield_pts/wpn_fps_predatorshield_body_akimbo"/>
+                <texture         path="guis/dlcs/mods/textures/pd2/blackmarket/icons/mods/mod_shield"/>
+
+        </AddFiles>
 
     <!-- Hooks -->
 	    <Hooks directory="Hooks">
