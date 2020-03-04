@@ -1,0 +1,12 @@
+<dynamic_object>
+	<diesel orientation_object="rp_wpn_fps_lmg_m134" />	
+	<animations>
+		<animation_group name="reload">
+			<object name="anim_reload_mag" enabled="true" />
+		</animation_group>
+		<animation_group name="thq">
+			<object name="anim_thq" enabled="true" />
+		</animation_group>
+	</animations>
+	
+</dynamic_object>

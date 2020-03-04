@@ -1,0 +1,12 @@
+<unit type="wpn" slot="1" >
+    <object file="units/mods/weapons/wpn_fps_predatorshield/wpn_fps_predatorshield" />
+	<dependencies>
+		<depends_on bnk="soundbanks/weapon_minigun"/>
+	</dependencies>
+    <extensions>
+        <extension name="unit_data" class="ScriptUnitData" />
+        <extension name="base" class="NewRaycastWeaponBase" >
+			<var name="name_id" value="predatorshield" />
+		</extension>
+    </extensions>
+</unit>

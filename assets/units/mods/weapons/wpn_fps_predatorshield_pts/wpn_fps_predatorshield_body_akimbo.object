@@ -1,0 +1,6 @@
+<dynamic_object>
+	<diesel materials="units/mods/weapons/wpn_fps_predatorshield_pts/wpn_fps_predatorshield_body_akimbo" orientation_object="rp_wpn_fps_lmg_m134_body_upper" />
+	<graphics>
+		<object name="g_handle" enabled="true" />
+	</graphics>
+</dynamic_object>
