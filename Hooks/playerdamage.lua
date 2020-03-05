@@ -1,6 +1,4 @@
-local _hts_PlayerDamage_damage_bullet = PlayerDamage.damage_bullet
-
-function PlayerDamage:damage_bullet(attack_data, ...)
+Hooks:PostHook(PlayerDamage, "damage_bullet", "shield_damage_bullet", function(self)
 	if not self:_chk_can_take_dmg() then
 		return
 	end
@@ -28,5 +26,4 @@ function PlayerDamage:damage_bullet(attack_data, ...)
 			end
 		end
 	end
-	_hts_PlayerDamage_damage_bullet(self, attack_data, ...)
-end
+end)

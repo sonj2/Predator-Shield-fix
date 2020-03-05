@@ -9,15 +9,8 @@
 
     <!-- Hooks -->
 	    <Hooks directory="Hooks">
-
-	        <hook file="weapontweakdata.lua" source_file="lib/tweak_data/weapontweakdata"/> <!-- Disable ammo for shield -->
-            <hook file="playertweakdata.lua" source_file="lib/tweak_data/playertweakdata"/> <!-- The View postition of the shield -->
             <hook file="playerstandard.lua" source_file="lib/units/beings/player/states/playerstandard"/> <!-- -->
             <hook file="playerinventory.lua" source_file="lib/units/beings/player/playerinventory"/> <!-- -->
             <hook file="playerdamage.lua" source_file="lib/units/beings/player/playerdamage"/> <!-- -->
-            <hook file="copdamage.lua" source_file="lib/units/enemies/cop/copdamage"/>
-            <hook file="weaponfactorytweakdata.lua" source_file="lib/tweak_data/weaponfactorytweakdata"/>
-            <hook file="akimboweaponbase.lua" source_file="lib/units/weapons/akimboweaponbase"/>
-            <hook file="newraycastweaponbase.lua" source_file="lib/units/weapons/newraycastweaponbase"/>
 	    </Hooks>
 </table>

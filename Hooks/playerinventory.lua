@@ -1,15 +1,9 @@
-local _hts_PlayerInventory_init = PlayerInventory.init
-
-function PlayerInventory:init(...)
-	_hts_PlayerInventory_init(self, ...)
+Hooks:PostHook(PlayerInventory, "init", "shield_init", function(self) 
 	self.player_shield = false
 	self.akimbo_shield_enabler = false
-end
+end)
 
-local _hts_PlayerInventory_place_selection = PlayerInventory._place_selection
-
-function PlayerInventory:_place_selection(selection_index, is_equip)
-	_hts_PlayerInventory_place_selection(self, selection_index, is_equip)
+Hooks:PostHook(PlayerInventory, "_place_selection", "shield_place_selection", function(self) 
 	if not self:is_this_able_to_shield() then
 		return
 	end
@@ -18,7 +12,9 @@ function PlayerInventory:_place_selection(selection_index, is_equip)
 	else
 		self:hide_shield()
 	end
-end
+end)
+
+Hooks:PostHook(PlayerInventory, "", "", function(self))
 
 function PlayerInventory:get_player_shield()
 	return self.player_shield
