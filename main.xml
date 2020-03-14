@@ -3,7 +3,7 @@
     <Localization directory="Localization" default="english.txt">
 
     </Localization>
-    <AssetUpdates id="19979" name="asset_updates" folder_name="predator-shield-3.0" provider="lastbullet"/>
+    <AssetUpdates id="99999" name="asset_updates" folder_name="predator-shield-fixed" provider="modworkshops"/>
 
     <GlobalValue id="predator_shield_reborn" color="Color(0, 1, 0)"/>
 
