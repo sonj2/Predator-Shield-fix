@@ -12,14 +12,6 @@ Hooks:PostHook(WeaponFactoryTweakData, "init", "WeaponFactoryTweakDatainit_akimb
 						table.insert(wFac[k].uses_parts, v2)					
 						table.insert(wFac[_npc_k].uses_parts, v2)
 					end
-					if k == "wpn_fps_smg_x_mp5" then
-						wFac[k].override = {mod_shield.stats.zoom = 2}
-					end
-					for type in wFac[k].categories then
-						if type == "pistol" then
-							wFac[k].override = {mod_shield.stats.zoom = 20}
-						end
-					end
 				end
 			end
 		end
