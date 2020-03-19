@@ -45,14 +45,30 @@ function PlayerStandard:update(t, ...)
     local weapon_id = weapon and weapon:get_name_id() or "default"
     local stances = tweak.stances[weapon_id]   
     --log('weapon_id'..tostring(weapon_id)) 
-    if self._unit:inventory():check_player_shield()  and tweak_data.weapon[weapon_id].category == "akimbo" then
-    	--log('is_akimbo')
-		stances['standard'].shoulders.translation = mvector3.copy(Vector3(25, -20.403, -4.27)) -- Devi usare questi
-		--stances['standard'].shoulders.rotation = mrotation.copy() -- Devi usare questi
-		stances['crouched'].shoulders.translation = mvector3.copy(Vector3(25, -20.403, -4.27)) -- Devi usare questi
-		--stances['crouched'].shoulders.rotation = mrotation.copy() -- Devi usare questi
-		stances['steelsight'].shoulders.translation = mvector3.copy(Vector3(21, 0, -4.27)) -- Devi usare questi
-        stances['steelsight'].shoulders.rotation = mrotation.copy(Rotation(0.349336, -0.256, -19.279)) -- Devi usare questi
+	if self._unit:inventory():check_player_shield() and tweak_data.weapon[weapon_id].category == "akimbo" then
+		if string.find(tweak_data.weapon[weapon_id].categories, "pistol") then
+			stances['standard'].shoulders.translation = mvector3.copy(Vector3(25, -20.403, -4.27))
+			--stances['standard'].shoulders.rotation = mrotation.copy()
+			stances['crouched'].shoulders.translation = mvector3.copy(Vector3(25, -20.403, -4.27))
+			--stances['crouched'].shoulders.rotation = mrotation.copy()
+			stances['steelsight'].shoulders.translation = mvector3.copy(Vector3(21, 0, -4.27))
+			stances['steelsight'].shoulders.rotation = mrotation.copy(Rotation(0.349336, -0.256, -19.279))
+		else if weapon_id == "x_mp5" then --akimbo mp5 has a different stance compared to other smgs
+			stances['standard'].shoulders.translation = mvector3.copy(Vector3(25, -1.403, -3.67))
+			--stances['standard'].shoulders.rotation = mrotation.copy()
+			stances['crouched'].shoulders.translation = mvector3.copy(Vector3(25, -1.403, -3.67))
+			--stances['crouched'].shoulders.rotation = mrotation.copy()
+			stances['steelsight'].shoulders.translation = mvector3.copy(Vector3(21, 19.403, -3.67))
+			stances['steelsight'].shoulders.rotation = mrotation.copy(Rotation(0.349336, -0.256, -19.279))
+		else
+			--log('is_akimbo')
+			stances['standard'].shoulders.translation = mvector3.copy(Vector3(25, -20.403, -4.27))
+			--stances['standard'].shoulders.rotation = mrotation.copy()
+			stances['crouched'].shoulders.translation = mvector3.copy(Vector3(25, -20.403, -4.27))
+			--stances['crouched'].shoulders.rotation = mrotation.copy()
+			stances['steelsight'].shoulders.translation = mvector3.copy(Vector3(21, 0, -4.27))
+			stances['steelsight'].shoulders.rotation = mrotation.copy(Rotation(0.349336, -0.256, -19.279))
+		end
 	end
 
 	if not self:_is_reloading() and not self:_is_meleeing()  then
