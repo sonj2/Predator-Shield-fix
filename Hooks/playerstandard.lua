@@ -46,20 +46,20 @@ function PlayerStandard:update(t, ...)
     local stances = tweak.stances[weapon_id]   
     --log('weapon_id'..tostring(weapon_id)) 
 	if self._unit:inventory():check_player_shield() and tweak_data.weapon[weapon_id].category == "akimbo" then
-		if string.find(tweak_data.weapon[weapon_id].categories, "pistol") then
+		if tweak_data.weapon[weapon_id].categories[2] == "pistol" then
 			stances['standard'].shoulders.translation = mvector3.copy(Vector3(25, -20.403, -4.27))
 			--stances['standard'].shoulders.rotation = mrotation.copy()
 			stances['crouched'].shoulders.translation = mvector3.copy(Vector3(25, -20.403, -4.27))
 			--stances['crouched'].shoulders.rotation = mrotation.copy()
-			stances['steelsight'].shoulders.translation = mvector3.copy(Vector3(21, 0, -4.27))
+			stances['steelsight'].shoulders.translation = mvector3.copy(Vector3(19, -10, -4.27))
 			stances['steelsight'].shoulders.rotation = mrotation.copy(Rotation(0.349336, -0.256, -19.279))
-		else if weapon_id == "x_mp5" then --akimbo mp5 has a different stance compared to other smgs
-			stances['standard'].shoulders.translation = mvector3.copy(Vector3(25, -1.403, -3.67))
+		elseif weapon_id == "x_mp5" then --akimbo mp5 has a different stance compared to other smgs
+			stances['standard'].shoulders.translation = mvector3.copy(Vector3(26, -1.403, -3.67))
 			--stances['standard'].shoulders.rotation = mrotation.copy()
-			stances['crouched'].shoulders.translation = mvector3.copy(Vector3(25, -1.403, -3.67))
+			stances['crouched'].shoulders.translation = mvector3.copy(Vector3(26, -1.403, -3.67))
 			--stances['crouched'].shoulders.rotation = mrotation.copy()
-			stances['steelsight'].shoulders.translation = mvector3.copy(Vector3(21, 19.403, -3.67))
-			stances['steelsight'].shoulders.rotation = mrotation.copy(Rotation(0.349336, -0.256, -19.279))
+			stances['steelsight'].shoulders.translation = mvector3.copy(Vector3(21, 18.403, -3.67))
+			stances['steelsight'].shoulders.rotation = mrotation.copy(Rotation(0.349336, -0.256, -13.279))
 		else
 			--log('is_akimbo')
 			stances['standard'].shoulders.translation = mvector3.copy(Vector3(25, -20.403, -4.27))
