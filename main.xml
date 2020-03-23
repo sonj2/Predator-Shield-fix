@@ -1,11 +1,11 @@
-<table name="predator_shield_reborn">
+<table name="predator_shield_fixed">
 
     <Localization directory="Localization" default="english.txt">
 
     </Localization>
-    <AssetUpdates id="99999" name="asset_updates" folder_name="predator-shield-fixed" provider="modworkshops"/>
+    <AssetUpdates id="26985" name="asset_updates" folder_name="predator-shield-fixed" version="1.0" provider="modworkshops"/>
 
-    <GlobalValue id="predator_shield_reborn" color="Color(0, 1, 0)"/>
+    <GlobalValue id="predator_shield_fixed" color="Color(0, 1, 0)"/>
 
     <!-- shield mod for akimbo -->
 
@@ -23,7 +23,7 @@
 
 
         <WeaponNew unlock_level="10">
-            <weapon id="predatorshield" based_on="m134" texture_bundle_folder="mods" weapon_hold="m134" global_value="predator_shield_reborn">  
+            <weapon id="predatorshield" based_on="m134" texture_bundle_folder="mods" weapon_hold="m134" global_value="predator_shield_fixed">  
               <stats zoom="4"/>
                 <use_data selection_index="2"/>   <!--1 secondary 2 primary -->
                 <animations reload_name_id="s552" equip_id="equip_s552" recoil_steelsight="true"></animations>             
@@ -52,7 +52,7 @@
 
 
         <WeaponNew unlock_level="10">
-            <weapon id="predatorshield_secondary" based_on="m134" texture_bundle_folder="mods" weapon_hold="m134" global_value="predator_shield_reborn">  
+            <weapon id="predatorshield_secondary" based_on="m134" texture_bundle_folder="mods" weapon_hold="m134" global_value="predator_shield_fixed">  
               <stats zoom="4"/>
                 <use_data selection_index="1"/>   <!--1 secondary 2 primary -->
                 <animations reload_name_id="s552" equip_id="equip_s552" recoil_steelsight="true"></animations>             

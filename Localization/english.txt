@@ -1,7 +1,7 @@
 {
-    "bm_w_predatorshield" : "Predator shield",
-    "bm_w_predatorshield_secondary" : "Predator shield Secondary",
-    "menu_l_global_value_predator_shield_reborn" : "This Shield is a MxSwat Mod!",
-    "bm_wp_mod_shield":"Base shield",
+    "bm_w_predatorshield" : "Predator Shield",
+    "bm_w_predatorshield_secondary" : "Predator Shield (Secondary)",
+    "menu_l_global_value_predator_shield_fixed" : "This Shield is from a Mod by Boo!",
+    "bm_wp_mod_shield":"Shield on one hand",
     "bm_menu_shield":"Shield"
 }

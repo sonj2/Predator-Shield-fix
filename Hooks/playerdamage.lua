@@ -32,7 +32,6 @@ function PlayerDamage:damage_bullet(attack_data, ...)
 end
 
 --different dmg reduction thought
-if tweak_data.weapon.predatorshield and false then --shield mechanic
 	if self._unit:inventory():check_player_shield() and attack_data and attack_data.col_ray.position and not self._unit:_is_interacting() then 
 		local ply_camera = managers.player:player_unit():camera()
 		local target_vec = attack_data.col_ray.position - ply_camera:position()
@@ -62,4 +61,3 @@ if tweak_data.weapon.predatorshield and false then --shield mechanic
 			--end
 		end
 	end
-end
