@@ -1,5 +1,4 @@
 Hooks:PostHook(WeaponFactoryTweakData, "init", "WeaponFactoryTweakDatainit_akimbo_shield", function(wFac, ...)
-	wFac.parts.mod_shield.override_weapon_multiply = {CLIP_AMMO_MAX = 0.5}
 	local _parts_name = {"mod_shield"}
 	for k, v in pairs(wFac or {}) do
 		if k ~= "parts" then
