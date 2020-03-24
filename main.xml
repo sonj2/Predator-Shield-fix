@@ -3,7 +3,7 @@
     <Localization directory="Localization" default="english.txt">
 
     </Localization>
-    <AssetUpdates id="26985" name="asset_updates" use_local_dir="true" use_local_path="true" version="1.021" provider="modworkshop"/>
+    <AssetUpdates id="26985" version="1.021" provider="modworkshop"/>
 
     <GlobalValue id="predator_shield_fixed" color="Color(0, 1, 0)"/>
 
