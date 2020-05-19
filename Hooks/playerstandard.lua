@@ -53,7 +53,14 @@ function PlayerStandard:update(t, ...)
 			--stances['crouched'].shoulders.rotation = mrotation.copy()
 			stances['steelsight'].shoulders.translation = mvector3.copy(Vector3(19, -10, -4.27))
 			stances['steelsight'].shoulders.rotation = mrotation.copy(Rotation(0.349336, -0.256, -19.279))
-		elseif weapon_id == "x_mp5" then --akimbo mp5 has a different stance compared to other smgs
+		elseif tweak_data.weapon[weapon_id].categories[2] == "shotgun" then --better than nothing for now
+			stances['standard'].shoulders.translation = mvector3.copy(Vector3(26, -1.403, -3.67))
+			--stances['standard'].shoulders.rotation = mrotation.copy()
+			stances['crouched'].shoulders.translation = mvector3.copy(Vector3(26, -1.403, -3.67))
+			--stances['crouched'].shoulders.rotation = mrotation.copy()
+			stances['steelsight'].shoulders.translation = mvector3.copy(Vector3(22, 22.403, 0.67))
+			stances['steelsight'].shoulders.rotation = mrotation.copy(Rotation(0.349336, -0.256, -16.879))
+		elseif weapon_id == "x_mp5" or weapon_id == "x_mp7" then --akimbo mp5 and mp7 have different stances
 			stances['standard'].shoulders.translation = mvector3.copy(Vector3(26, -1.403, -3.67))
 			--stances['standard'].shoulders.rotation = mrotation.copy()
 			stances['crouched'].shoulders.translation = mvector3.copy(Vector3(26, -1.403, -3.67))
