@@ -60,10 +60,24 @@ function PlayerStandard:update(t, ...)
 			--stances['crouched'].shoulders.rotation = mrotation.copy()
 			stances['steelsight'].shoulders.translation = mvector3.copy(Vector3(22, 22.403, 0.67))
 			stances['steelsight'].shoulders.rotation = mrotation.copy(Rotation(0.349336, -0.256, -16.879))
-		elseif weapon_id == "x_mp5" or weapon_id == "x_mp7" then --akimbo mp5 and mp7 have different stances
+		elseif weapon_id == "x_mp7" then --akimbo mp7
 			stances['standard'].shoulders.translation = mvector3.copy(Vector3(26, -1.403, -3.67))
 			--stances['standard'].shoulders.rotation = mrotation.copy()
 			stances['crouched'].shoulders.translation = mvector3.copy(Vector3(26, -1.403, -3.67))
+			--stances['crouched'].shoulders.rotation = mrotation.copy()
+			stances['steelsight'].shoulders.translation = mvector3.copy(Vector3(22, 22.403, 0.67))
+			stances['steelsight'].shoulders.rotation = mrotation.copy(Rotation(0.349336, -0.256, -16.879))
+		elseif weapon_id == "x_mp5" then --akimbo mp5
+			stances['standard'].shoulders.translation = mvector3.copy(Vector3(26, -1.403, -0.67))
+			--stances['standard'].shoulders.rotation = mrotation.copy()
+			stances['crouched'].shoulders.translation = mvector3.copy(Vector3(26, -1.403, -0.67))
+			--stances['crouched'].shoulders.rotation = mrotation.copy()
+			stances['steelsight'].shoulders.translation = mvector3.copy(Vector3(22, 22.403, 0.67))
+			stances['steelsight'].shoulders.rotation = mrotation.copy(Rotation(0.349336, -0.256, -16.879))
+		elseif weapon_id == "x_p90" then --akimbo p90, we might be looking at a situation where akimbo smgs either fall into the categories of mp5-esque viewpoint and those that are not
+			stances['standard'].shoulders.translation = mvector3.copy(Vector3(26, -1.403, -0.67))
+			--stances['standard'].shoulders.rotation = mrotation.copy()
+			stances['crouched'].shoulders.translation = mvector3.copy(Vector3(26, -1.403, -0.67))
 			--stances['crouched'].shoulders.rotation = mrotation.copy()
 			stances['steelsight'].shoulders.translation = mvector3.copy(Vector3(22, 22.403, 0.67))
 			stances['steelsight'].shoulders.rotation = mrotation.copy(Rotation(0.349336, -0.256, -16.879))
@@ -95,7 +109,7 @@ function PlayerStandard:update(t, ...)
 	if managers.player:has_category_upgrade("player", "run_and_shoot") == false and self._unit:inventory():is_this_able_to_shield() and tweak_data.weapon[equipped_primariy.weapon_id].category == "akimbo" then
 		managers.player.RUN_AND_SHOOT = true -- True because the running animation sucks 
 	end
-	]]
+	]]--
 	
 end
 
