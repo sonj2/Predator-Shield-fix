@@ -3,13 +3,13 @@
     <Localization directory="Localization" default="english.txt">
 
     </Localization>
-    <AssetUpdates id="26985" version="1.06" provider="modworkshop"/>
+    <AssetUpdates id="26985" version="1.07" provider="modworkshop"/>
 
     <GlobalValue id="predator_shield_fixed" color="Color(0, 1, 0)"/>
 
     <!-- shield mod for akimbo -->
 
-    <WeaponMod id="mod_shield" based_on="wpn_fps_upg_o_reflex" type="shield" unit="units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy" texture_bundle_folder="mods" drop="false" is_a_unlockable="true">
+    <WeaponMod id="mod_shield" based_on="wpn_fps_upg_fl_pis_tlr1" type="shield" unit="units/payday2/weapons/wpn_upg_dummy/wpn_upg_dummy" texture_bundle_folder="mods" drop="false" is_a_unlockable="true">
         <stats concealment="-20" suppression="-10" spread="1" recoil="1"/>
         <override_weapon_multiply CLIP_AMMO_MAX = "0.5"/>
     </WeaponMod>  
